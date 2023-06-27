@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Período de ingresso</th>
+                <th>Nota</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.entryPeriod }}</td>
+                <td>{{ student.grade }}</td>
+                <td>{{ student.situation }}</td>
+            </tr>
+        </tbody>
+    </table>    
+
+{% endblock content %}
+    
