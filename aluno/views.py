@@ -8,7 +8,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 def matricula(request, id):
-    student = get_object_or_404(Student, pk=1)
+    student = get_object_or_404(Student, pk=id)
     context = { "student": student }
     return render(request, 'matricula.html', context)
 

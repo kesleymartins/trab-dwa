@@ -2,8 +2,18 @@
 
 {% block content %}
     {% if students %}
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush border rounded shadow-sm">
             {% for student in students %}
+                <li class="list-group-item">
+                    <section class="d-flex justify-content-between">
+                        <span>{{ student.name }}</span>
+                        <span>
+                            <a href="{% url 'students.matricula' student.id %}" class="btn btn-primary">
+                                Matricula
+                            </a>
+                        </span>
+                    </section>
+                </li>
                 <li class="list-group-item">{{ student.name }}</li>
             {% endfor %}
         </ul>
