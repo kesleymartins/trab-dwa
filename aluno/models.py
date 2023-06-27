@@ -10,5 +10,5 @@ class Student(models.Model):
     name = models.CharField(max_length=100)
     entryPeriod = models.CharField(max_length=6)
     email = models.EmailField(max_length=100)
-    frade = models.FloatField()
+    grade = models.FloatField()
     situation = models.IntegerField(choices=situations, default=1)
